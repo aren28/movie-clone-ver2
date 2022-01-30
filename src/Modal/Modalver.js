@@ -13,7 +13,7 @@ function Modalver() {
     <div>
         <div>
           <div class="row">
-              <h2>NETFLIX ORIGINALS-TEST</h2>
+              <h2>NETFLIX ORIGINALS</h2>
               <div class="row__posters">
                   <img onClick={onOpenModal} class="row__poster row__posterLarge" src="https://image.tmdb.org/t/p/original//9yxep7oJdkj3Pla9TD9gKflRApY.jpg" alt="" />
 
