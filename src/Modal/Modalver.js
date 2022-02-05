@@ -15,21 +15,7 @@ function Modalver() {
           <div class="row">
               <h2>NETFLIX ORIGINALS</h2>
               <div class="row__posters">
-                  <img onClick={onOpenModal} class="row__poster row__posterLarge" src="https://image.tmdb.org/t/p/original//9yxep7oJdkj3Pla9TD9gKflRApY.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="https://image.tmdb.org/t/p/original//9yxep7oJdkj3Pla9TD9gKflRApY.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="https://image.tmdb.org/t/p/original//9yxep7oJdkj3Pla9TD9gKflRApY.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="" />
-
-                  <img class="row__poster row__posterLarge" src="images/large-movie8.jpg" alt="" />
+                  <img onClick={onOpenModal} class="row__poster row__posterLarge" src="https://www.billboard-japan.com/common/sys/img/news/00000092/92922/image.jpg" alt="" />
               </div>
           </div>
           <Modal 
@@ -38,6 +24,7 @@ function Modalver() {
           center
           closeOnEsc
           showCloseIcon
+          blockScroll="true"
           styles={{
             modal: {
               maxWidth: "102%",
@@ -52,7 +39,9 @@ function Modalver() {
               background: "rgba(0, 0, 0, 0.5)"
             },
             closeButton: {
-              background: "yellow"
+              background: "white",
+              top:"20px",
+              right:"60px"
             }
           }}
           >
@@ -60,7 +49,7 @@ function Modalver() {
             width="100%" 
             height="100%" 
             allow="autoplay"
-            allowFullScreen="true"
+            allowFullScreen={true}
             ></Iframe>
           </Modal>
         </div>
