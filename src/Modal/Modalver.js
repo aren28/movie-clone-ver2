@@ -1,7 +1,6 @@
 import {useState,useEffect} from 'react'
 import Modal from "react-responsive-modal";
 import 'react-responsive-modal/styles.css';
-import Iframe from 'react-iframe';
 import ReactPlayer from 'react-player'
 
 function Modalver() {
@@ -10,8 +9,15 @@ function Modalver() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-  const onOpenModal = () => setOpen(true);
+  const onOpenModal = function(event){
+    var attribute =  event.target.getAttribute("data-url");
+    console.log(attribute);
+    setmovieUrl(attribute);
+    return setOpen(true);
+  };
   const onCloseModal = () => setOpen(false);
+
+  const [movieUrl, setmovieUrl] = useState("");
 
   useEffect(() => {
     fetch(
@@ -48,9 +54,11 @@ function Modalver() {
                 {items.map((movieArray) => (
                 // <div className="movie" data-movieurl={`${movieArray.videoUrl}`}>
                   <img
+                    key={movieArray.id}
                     className="row__poster row__posterLarge"
                     src={`${movieArray.thumbnail}`}
                     onClick={onOpenModal}
+                    data-url={`${movieArray.videoUrl}`}
                   />
                   // </div>
                 ))}
@@ -87,7 +95,7 @@ function Modalver() {
                 controls
                 width="100%"
                 height="100%"
-                url="https://videos-netflix-clone.s3.ap-northeast-1.amazonaws.com/Uncharted.2022.HDCAM.850MB.c1nem4.x264-SUNSCREEN.mkv"
+                url={movieUrl}
               />
             </Modal>
           </div>
