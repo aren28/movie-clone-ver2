@@ -136,3 +136,19 @@ body {
   position: inherit !important;
   margin: 0px !important;
 }
+@media screen and (min-width:1300px) { 
+  .react-responsive-modal-closeButton {
+    opacity: 0;
+  }
+  .react-responsive-modal-closeButton:hover {
+    animation: fadein 1s forwards;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

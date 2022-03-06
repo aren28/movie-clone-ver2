@@ -18,6 +18,11 @@ function Modalver() {
 
   const [movieUrl, setmovieUrl] = useState("");
 
+  const closeIcon = (
+    <img src="https://img.icons8.com/material/48/000000/close-window--v1.png"/>
+  );
+
+
   useEffect(() => {
     fetch(
       "https://movie-clone-a5867-default-rtdb.firebaseio.com/movies/actionMovies.json"
@@ -69,6 +74,7 @@ function Modalver() {
             center
             closeOnEsc
             showCloseIcon
+            closeIcon={closeIcon}
             blockScroll="true"
             styles={{
               modal: {
@@ -86,7 +92,7 @@ function Modalver() {
               closeButton: {
                 background: "white",
                 top:"20px",
-                right:"60px"
+                right:"10px"
               }
             }}
             >
