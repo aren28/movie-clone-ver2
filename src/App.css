@@ -132,3 +132,7 @@ body {
 .nav__black {
   background-color: #111;
 }
+.react-responsive-modal-modal {
+  position: inherit !important;
+  margin: 0px !important;
+}

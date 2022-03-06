@@ -10,9 +10,8 @@ function Modalver() {
   const [items, setItems] = useState([]);
 
   const onOpenModal = function(event){
-    var attribute =  event.target.getAttribute("data-url");
-    console.log(attribute);
-    setmovieUrl(attribute);
+    var videoUri =  event.target.getAttribute("data-url");
+    setmovieUrl(videoUri);
     return setOpen(true);
   };
   const onCloseModal = () => setOpen(false);
