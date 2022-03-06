@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react'
 import Modal from "react-responsive-modal";
 import 'react-responsive-modal/styles.css';
 import ReactPlayer from 'react-player'
-
+import closeButton from "../images/closebutton.png";
 function Modalver() {
   const [open, setOpen] = useState(false);
   const [error, setError] = useState(null);
@@ -18,8 +18,14 @@ function Modalver() {
 
   const [movieUrl, setmovieUrl] = useState("");
 
+  const styleCloseButton = {
+    width: "50px",
+    background: "#ffffff",
+    borderRadius: "35px"
+  };
+
   const closeIcon = (
-    <img src="https://img.icons8.com/material/48/000000/close-window--v1.png"/>
+    <img src={closeButton} style={styleCloseButton}/>
   );
 
 
@@ -90,7 +96,6 @@ function Modalver() {
                 background: "rgba(0, 0, 0, 0.5)"
               },
               closeButton: {
-                background: "white",
                 top:"20px",
                 right:"10px"
               }
