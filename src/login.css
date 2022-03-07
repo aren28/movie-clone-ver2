@@ -1,0 +1,102 @@
+  .login_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(https://bit.ly/2E3scwW);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #b3b3b3;
+    background-blend-mode: multiply;
+  }
+  .login_wrapper .login {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    min-width: 300px;
+    height: 100%;
+    padding: 60px 68px 40px;
+  }
+  .login_wrapper .login__title {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .login_wrapper .login__group {
+    position: relative;
+    z-index: 10;
+    display: flex;
+  }
+  .login_wrapper .login__group__label {
+    position: absolute;
+    z-index: 150;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    top: 30px;
+    left: 18px;
+    transition: all 300ms ease-in;
+    will-change: transform;
+  }
+  .login_wrapper .login__group__input {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    background: #333;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    opacity: 1;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 50px;
+    padding: 12px 18px 0;
+  }
+  .login_wrapper .login__group__input:focus + .login__group__label {
+    top: 15px;
+    font-size: 0.7rem;
+  }
+  .login_wrapper .login__sign-in {
+    margin: 24px 0 12px;
+    padding: 16px;
+    color: #fff;
+    background: #e50914;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .login_wrapper .login__secondary-cta {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+  }
+  .login_wrapper .login__secondary-cta__text {
+    opacity: 1;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    text-decoration: none;
+    will-change: transform;
+  }
+  .login_wrapper .login__secondary-cta__text--need-help {
+    transition: all 0.3s ease-in;
+  }
+  .login_wrapper .login__secondary-cta__text--need-help:hover {
+    text-decoration: underline;
+  }
+  
+  ::-moz-placeholder {
+    font-size: 0.7rem;
+  }
+  
+  :-ms-input-placeholder {
+    font-size: 0.7rem;
+  }
+  
+  ::placeholder {
+    font-size: 0.7rem;
+  }

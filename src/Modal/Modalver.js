@@ -14,7 +14,10 @@ function Modalver() {
     setmovieUrl(videoUri);
     return setOpen(true);
   };
-  const onCloseModal = () => setOpen(false);
+  
+  const onCloseModal = function () {
+    return setOpen(false);
+  } 
 
   const [movieUrl, setmovieUrl] = useState("");
 
@@ -39,9 +42,6 @@ function Modalver() {
           setIsLoaded(true);
           setItems(result);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           setIsLoaded(true);
           setError(error);
@@ -62,7 +62,6 @@ function Modalver() {
                 <h2>NETFLIX ORIGINALS</h2>
                 <div className="row__posters">
                 {items.map((movieArray) => (
-                // <div className="movie" data-movieurl={`${movieArray.videoUrl}`}>
                   <img
                     key={movieArray.id}
                     className="row__poster row__posterLarge"
@@ -70,7 +69,6 @@ function Modalver() {
                     onClick={onOpenModal}
                     data-url={`${movieArray.videoUrl}`}
                   />
-                  // </div>
                 ))}
                 </div>
             </div>
@@ -111,7 +109,7 @@ function Modalver() {
           </div>
       </div>
       );
-        }
+    }
 }
 
 export default Modalver;

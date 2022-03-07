@@ -1,16 +1,17 @@
 import './App.css';
-import React,{useState} from 'react'
-import Nav from './global/components/Nav';
-import Header from './global/components/Header';
-import Row from "./Modal/Row";
+import react from 'react';
+import { BrowserRouter as Router,Routes, Route} from "react-router-dom";
+import Home from './Home';
+import Login from './Login';
+
 function App() {
   return (
-
-    <div className="App">
-      <Nav />
-      <Header />
-      <Row />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/home' element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
